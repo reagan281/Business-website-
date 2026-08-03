@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milan Investment Company | Cleaning, Fumigation, Car Care & Gardening — Nairobi</title>
+<meta name="description" content="Milan Investment Company provides professional general cleaning, fumigation, car detailing, deep cleaning and gardening services in Nairobi. Book online in minutes.">
+<meta property="og:title" content="Milan Investment Company — Professional Cleaning & Facilities Services">
+<meta property="og:description" content="Book vetted, insured cleaning, fumigation, car detailing and gardening crews in Nairobi.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.milaninvestment.example/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   MILAN INVESTMENT COMPANY — shared styles
+   Palette: chalk white / deep pine / brass gold / sage / ink
+   Type: Space Grotesk (display) · Inter (body) · IBM Plex Mono (data)
+   Signature: perforated "service ticket" motif
+=========================================================== */
+
+:root{
+  --bg:        #F6F7F4;
+  --surface:   #FFFFFF;
+  --ink:       #13241D;
+  --ink-soft:  #4A5C53;
+  --forest:    #0E4A38;
+  --forest-deep:#0A3527;
+  --gold:      #C79A3D;
+  --gold-soft: #E9D9AF;
+  --sage:      #DCE7E1;
+  --leaf:      #7FB069;
+  --line:      rgba(19,36,29,0.14);
+  --line-soft: rgba(19,36,29,0.08);
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --shadow-card: 0 1px 2px rgba(19,36,29,0.06), 0 8px 24px -12px rgba(19,36,29,0.18);
+  --maxw: 1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:'Space Grotesk',sans-serif;
+  color:var(--forest-deep);
+  margin:0 0 .4em;
+  line-height:1.08;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em;color:var(--ink-soft);}
+a{color:inherit;text-decoration:none;}
+.mono{font-family:'IBM Plex Mono',monospace; letter-spacing:.02em;}
+img{max-width:100%;display:block;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+:focus-visible{outline:2px solid var(--forest); outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.95rem;
+  padding:13px 22px;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--forest);color:#fff;}
+.btn-primary:hover{background:var(--forest-deep);}
+.btn-gold{background:var(--gold);color:var(--forest-deep);}
+.btn-gold:hover{box-shadow:0 6px 18px -6px rgba(199,154,61,.6);}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink);}
+.btn-outline:hover{border-color:var(--forest);color:var(--forest);}
+.btn-sm{padding:9px 16px;font-size:.85rem;}
+.btn-block{width:100%;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}
+
+/* ---------- header / nav ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;background:rgba(246,247,244,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--forest-deep);}
+.brand .mark{
+  width:34px;height:34px;border-radius:8px;background:var(--forest);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  font-size:.95rem;font-weight:700;font-family:'Space Grotesk',sans-serif;flex:none;
+}
+.brand small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:.63rem;color:var(--ink-soft);letter-spacing:.08em;}
+.nav-links{display:flex;gap:32px;font-size:.92rem;font-weight:500;}
+.nav-links a{color:var(--ink-soft);position:relative;padding:4px 0;}
+.nav-links a:hover, .nav-links a.active{color:var(--forest-deep);}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold);}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.cart-pill{
+  display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;
+  padding:8px 14px;font-family:'IBM Plex Mono',monospace;font-size:.8rem;background:var(--surface);
+}
+.cart-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--leaf);}
+.nav-toggle{display:none;}
+
+@media (max-width:840px){
+  .nav-links{display:none;}
+  .nav-toggle{display:flex;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;}
+}
+
+/* view router */
+.view{display:none;}
+.view.active{display:block; animation:fadeIn .3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+/* mobile nav drawer */
+.mobile-toggle{display:none;align-items:center;justify-content:center;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;}
+.mobile-nav{
+  display:none;position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--surface);
+  z-index:70;padding:90px 26px 26px;flex-direction:column;gap:20px;box-shadow:-10px 0 30px rgba(0,0,0,.15);
+  transform:translateX(100%);transition:transform .25s ease;
+}
+.mobile-nav.open{transform:translateX(0);}
+.mobile-nav a{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink);}
+@media (max-width:840px){
+  .mobile-toggle{display:flex;}
+  .mobile-nav{display:flex;}
+}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 40px;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;
+  font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);
+  background:var(--sage);border-radius:999px;padding:6px 12px;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.4rem);max-width:16ch;}
+.hero-sub{font-size:1.08rem;max-width:46ch;}
+.hero-actions{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:28px;margin-top:36px;padding-top:26px;border-top:1px solid var(--line);}
+.hero-stats div b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--forest-deep);}
+.hero-stats div span{font-size:.78rem;color:var(--ink-soft);}
+
+/* ---------- service ticket (signature motif) ---------- */
+.ticket{
+  position:relative;background:var(--surface);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-card);overflow:hidden;border:1px solid var(--line-soft);
+}
+.ticket-head{
+  background:var(--forest);color:#fff;padding:18px 22px;display:flex;
+  justify-content:space-between;align-items:center;
+}
+.ticket-head .id{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;opacity:.85;}
+.ticket-head .status{
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;background:var(--leaf);
+  color:var(--forest-deep);padding:3px 9px;border-radius:999px;font-weight:600;
+}
+.ticket-body{padding:22px;}
+.ticket-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem;}
+.ticket-row:last-child{border-bottom:none;}
+.ticket-row span:first-child{color:var(--ink-soft);}
+.ticket-row span:last-child{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--forest-deep);}
+.perf{
+  height:16px;position:relative;
+  background:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px);
+}
+.perf::before,.perf::after{
+  content:"";position:absolute;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--bg);
+}
+.perf::before{left:-8px;} .perf::after{right:-8px;}
+.stamp{
+  position:absolute;top:20px;right:-18px;transform:rotate(12deg);
+  border:2.5px solid var(--gold);color:var(--gold);font-family:'Space Grotesk',sans-serif;
+  font-weight:700;font-size:.68rem;letter-spacing:.08em;padding:5px 14px;border-radius:6px;
+  text-transform:uppercase;background:rgba(199,154,61,.06);
+}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;gap:20px;flex-wrap:wrap;}
+.section-head p{margin:0;max-width:52ch;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
+
+.band-dark{background:var(--forest-deep);color:#fff;}
+.band-dark h2, .band-dark h3{color:#fff;}
+.band-dark p{color:rgba(255,255,255,.72);}
+.band-sage{background:var(--sage);}
+
+/* ---------- grids / cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+@media (max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr);} .grid-2{grid-template-columns:1fr;}}
+@media (max-width:600px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-m);
+  padding:24px;box-shadow:var(--shadow-card);
+}
+.svc-card{
+  background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-m);
+  overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;transition:transform .18s ease;
+}
+.svc-card:hover{transform:translateY(-3px);}
+.svc-thumb{
+  height:150px;background:linear-gradient(135deg,var(--forest) 0%, var(--forest-deep) 100%);
+  position:relative;display:flex;align-items:center;justify-content:center;
+}
+.svc-thumb svg{width:76px;height:76px;color:var(--gold);}
+.svc-badge{
+  position:absolute;top:12px;left:12px;background:var(--gold);color:var(--forest-deep);
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:5px;
+}
+.svc-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.svc-body h3{font-size:1.05rem;margin:0;}
+.svc-body p{font-size:.88rem;margin:0;flex:1;}
+.svc-meta{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--line-soft);}
+.price{font-family:'IBM Plex Mono',monospace;font-weight:700;color:var(--forest-deep);}
+.price small{font-weight:400;color:var(--ink-soft);}
+.stars{color:var(--gold);font-size:.82rem;letter-spacing:1px;}
+
+/* filter bar */
+.filter-bar{
+  display:flex;gap:10px;flex-wrap:wrap;padding:16px;background:var(--surface);
+  border:1px solid var(--line-soft);border-radius:var(--radius-m);margin-bottom:28px;
+  align-items:center;
+}
+.chip{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;border:1px solid var(--line);
+  border-radius:999px;padding:7px 14px;cursor:pointer;background:transparent;color:var(--ink-soft);
+}
+.chip.active{background:var(--forest);border-color:var(--forest);color:#fff;}
+.filter-bar select, .filter-bar input[type="search"]{
+  font-family:'Inter',sans-serif;border:1px solid var(--line);border-radius:8px;padding:9px 12px;
+  background:var(--surface);color:var(--ink);font-size:.88rem;
+}
+.filter-bar input[type="search"]{flex:1;min-width:180px;}
+
+/* testimonials */
+.quote-card{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-m);padding:24px;box-shadow:var(--shadow-card);}
+.quote-card .stars{margin-bottom:10px;display:block;}
+.quote-card footer{margin-top:14px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.88rem;color:var(--forest-deep);}
+.quote-card footer span{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:.78rem;color:var(--ink-soft);}
+.avatar{
+  width:38px;height:38px;border-radius:50%;background:var(--forest);color:var(--gold);flex:none;
+  display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;
+  font-weight:700;font-size:.78rem;letter-spacing:.02em;
+}
+
+/* steps */
+.step{display:flex;gap:16px;}
+.step .n{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--gold);
+  width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+
+/* forms */
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:var(--ink);}
+.field input, .field select, .field textarea{
+  width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:.92rem;background:var(--surface);color:var(--ink);
+}
+.field input:focus, .field select:focus, .field textarea:focus{border-color:var(--forest);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:600px){.field-row{grid-template-columns:1fr;}}
+
+/* table */
+table{width:100%;border-collapse:collapse;font-size:.9rem;}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);padding:10px 12px;border-bottom:1px solid var(--line);}
+td{padding:12px;border-bottom:1px solid var(--line-soft);}
+tr:last-child td{border-bottom:none;}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:.7rem;padding:3px 9px;border-radius:999px;font-weight:600;}
+.badge-done{background:var(--sage);color:var(--forest-deep);}
+.badge-pending{background:var(--gold-soft);color:#7a5c17;}
+.badge-progress{background:#DCEBF7;color:#1c5a8a;}
+
+/* footer */
+.site-footer{background:var(--forest-deep);color:rgba(255,255,255,.78);padding:56px 0 26px;margin-top:60px;}
+.site-footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;}
+.site-footer a{color:rgba(255,255,255,.72);}
+.site-footer a:hover{color:var(--gold);}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12);}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;font-size:.88rem;}
+.foot-bottom{display:flex;justify-content:space-between;padding-top:22px;font-size:.78rem;flex-wrap:wrap;gap:10px;}
+.social-row{display:flex;gap:10px;}
+.social-row a{width:34px;height:34px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+@media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;}}
+
+/* whatsapp float */
+.wa-float{
+  position:fixed;bottom:22px;right:22px;background:#1EA952;color:#fff;width:56px;height:56px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4);
+  z-index:60;
+}
+.wa-float svg{width:26px;height:26px;}
+
+/* toast */
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--forest-deep);color:#fff;padding:13px 22px;border-radius:999px;
+  font-family:'Space Grotesk',sans-serif;font-size:.88rem;font-weight:600;opacity:0;
+  transition:opacity .25s ease, transform .25s ease;pointer-events:none;z-index:100;
+  display:flex;align-items:center;gap:10px;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast .dot{width:8px;height:8px;border-radius:50%;background:var(--leaf);}
+
+/* misc */
+.divider{height:1px;background:var(--line);margin:36px 0;}
+.small{font-size:.8rem;color:var(--ink-soft);}
+.center{text-align:center;}
+.page-hero{padding:52px 0 36px;border-bottom:1px solid var(--line);}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--ink-soft);margin-bottom:14px;}
+.breadcrumb a:hover{color:var(--forest);}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Milan Investment Company",
+  "description": "Professional cleaning, fumigation, car detailing and gardening services.",
+  "areaServed": "Lang'ata, Nairobi, Kenya",
+  "telephone": "+254720697468",
+  "email": "milaninvestment72@gmail.com",
+  "priceRange": "KSh 1,800 - KSh 12,000"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#" class="brand" data-view="view-home">
+      <span class="mark">MI</span>
+      <span>MILAN<small>INVESTMENT COMPANY</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#" data-view="view-home" class="active">Home</a>
+      <a href="#" data-view="view-services">Services</a>
+      <a href="#" data-view="view-booking">Booking</a>
+      <a href="#" data-view="view-account">My Account</a>
+      <a href="#" data-view="view-admin">Admin</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="cart-pill" data-view="view-booking"><span class="dot"></span> Booking · <span class="cart-count">0</span></a>
+      <a href="#" class="btn btn-primary btn-sm" data-view="view-services">Book now</a>
+      <button class="mobile-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav">
+  <a href="#" data-view="view-home">Home</a>
+  <a href="#" data-view="view-services">Services</a>
+  <a href="#" data-view="view-booking">Booking</a>
+  <a href="#" data-view="view-account">My Account</a>
+  <a href="#" data-view="view-admin">Admin</a>
+</nav>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<section class="view active" id="view-home">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">● Nairobi, Kenya · Licensed &amp; insured crews</span>
+        <h1>Spotless spaces, handled by people who show up on time.</h1>
+        <p class="hero-sub">General cleaning, fumigation, car detailing, deep cleaning and gardening — booked online, tracked with a job ticket, done right the first time.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-view="view-services">Browse services</a>
+          <a href="#" class="btn btn-outline" data-view="view-booking">Get a free quote</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4,800+</b><span>Jobs completed</span></div>
+          <div><b>4.8 / 5</b><span>Average rating</span></div>
+          <div><b>&lt; 2 hrs</b><span>Typical response time</span></div>
+        </div>
+      </div>
+      <div class="ticket" style="max-width:380px;margin-left:auto;">
+        <div class="ticket-head">
+          <span class="id mono">JOB #MI-4820</span>
+          <span class="status">COMPLETED</span>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-row"><span>Service</span><span>Deep Cleaning</span></div>
+          <div class="ticket-row"><span>Client</span><span>3-bed apartment</span></div>
+          <div class="ticket-row"><span>Crew</span><span>3 staff</span></div>
+          <div class="ticket-row"><span>Duration</span><span>4h 40m</span></div>
+          <div class="ticket-row"><span>Rating left</span><span>★★★★★</span></div>
+        </div>
+        <div class="perf"></div>
+        <div style="padding:18px 22px;">
+          <p class="small" style="margin:0;">"Booked at 8am, they were at the door by 10. House hasn't looked this good since we moved in." — Wanjiru K.</p>
+        </div>
+        <div class="stamp">TRUSTED</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="tag">Categories</span><h2>Pick a category to get started</h2></div>
+      </div>
+      <div class="grid-4" id="home-categories"></div>
+    </div>
+  </section>
+
+  <section class="band-sage">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="tag">Best sellers</span><h2>Most booked this month</h2></div>
+        <a href="#" class="btn btn-outline btn-sm" data-view="view-services">View all services →</a>
+      </div>
+      <div class="grid-3" id="home-featured"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="tag">Process</span><h2>How booking works</h2></div>
+      </div>
+      <div class="grid-3">
+        <div class="step"><div class="n">1</div><div><h4>Choose a service</h4><p>Pick from our five categories and see upfront pricing — no hidden call-out surprises.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h4>We open a job ticket</h4><p>You get a confirmed time window and a named crew, tracked from arrival to sign-off.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h4>Pay &amp; rate</h4><p>Pay by card, mobile money or invoice, then rate the crew — feeds straight into our quality reports.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="tag" style="color:var(--gold);">Reviews</span><h2>What clients say</h2></div>
+      </div>
+      <div class="grid-3">
+        <div class="quote-card"><span class="stars">★★★★★</span><p style="color:var(--ink-soft);">"Fumigation team was thorough and explained exactly what they were treating for. No more cockroaches, three months on."</p><footer style="display:flex;align-items:center;gap:10px;"><span class="avatar">BO</span><span>Brian O.<span>Fumigation client, Kilimani</span></span></footer></div>
+        <div class="quote-card"><span class="stars">★★★★★</span><p style="color:var(--ink-soft);">"Our office contract has been flawless for eight months. Same supervisor every visit, which makes a real difference."</p><footer style="display:flex;align-items:center;gap:10px;"><span class="avatar">AH</span><span>Amina H.<span>Facilities Manager</span></span></footer></div>
+        <div class="quote-card"><span class="stars">★★★★★</span><p style="color:var(--ink-soft);">"Gardening crew turned an overgrown compound around in one afternoon. Booked the monthly plan on the spot."</p><footer style="display:flex;align-items:center;gap:10px;"><span class="avatar">PM</span><span>Peter M.<span>Homeowner, Karen</span></span></footer></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;padding:36px;">
+      <div>
+        <span class="tag">Stay in the loop</span>
+        <h3 style="margin:6px 0 4px;">Get seasonal offers &amp; care tips</h3>
+        <p style="margin:0;">One email a month — no spam. Unsubscribe any time.</p>
+      </div>
+      <form style="display:flex;gap:10px;flex-wrap:wrap;" onsubmit="event.preventDefault(); toast('Subscribed — welcome aboard');">
+        <input type="email" required placeholder="you@email.com" style="padding:12px 14px;border:1px solid var(--line);border-radius:8px;min-width:220px;">
+        <button class="btn btn-gold" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</section>
+
+<!-- ============ SERVICES (shop) ============ -->
+<section class="view" id="view-services">
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="#" data-view="view-home">Home</a> / Services</div>
+    <h1>All services</h1>
+    <p>Transparent per-visit pricing. Add multiple services to one booking and we'll coordinate the crews.</p>
+  </div>
+  <div class="wrap" style="padding:36px 24px 80px;">
+    <div class="filter-bar">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="cleaning">Cleaning</button>
+      <button class="chip" data-cat="fumigation">Fumigation</button>
+      <button class="chip" data-cat="car">Car care</button>
+      <button class="chip" data-cat="garden">Gardening</button>
+      <input type="search" id="svc-search" placeholder="Search services…">
+      <select aria-label="Sort">
+        <option>Sort: Recommended</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Rating</option>
+      </select>
+    </div>
+    <div class="grid-3" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICE DETAIL (product page) ============ -->
+<section class="view" id="view-service-detail">
+  <div class="wrap" style="padding:40px 24px 80px;" id="detail-content"></div>
+</section>
+
+<!-- ============ BOOKING (cart) ============ -->
+<section class="view" id="view-booking">
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="#" data-view="view-home">Home</a> / Booking</div>
+    <h1>Your booking</h1>
+    <p>Review the services you've selected before checkout.</p>
+  </div>
+  <div class="wrap" style="padding:36px 24px 80px;">
+    <div class="grid-2" style="align-items:flex-start;grid-template-columns:1.6fr 1fr;">
+      <div id="booking-items"></div>
+      <div class="ticket">
+        <div class="ticket-head"><span class="id mono">SUMMARY</span><span class="status">DRAFT</span></div>
+        <div class="ticket-body" id="booking-summary"></div>
+        <div class="perf"></div>
+        <div style="padding:20px 22px;">
+          <div style="display:flex;gap:8px;margin-bottom:14px;">
+            <input type="text" id="promo-code" placeholder="Promo code (try WELCOME10)" style="flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:8px;">
+            <button class="btn btn-outline btn-sm" id="apply-promo">Apply</button>
+          </div>
+          <button class="btn btn-primary btn-block" onclick="goCheckout()">Proceed to checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKOUT ============ -->
+<section class="view" id="view-checkout">
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="#" data-view="view-booking">Booking</a> / Checkout</div>
+    <h1>Checkout</h1>
+    <p>Guest checkout available — create an account afterwards to track this job.</p>
+  </div>
+  <div class="wrap" style="padding:36px 24px 80px;">
+    <div class="grid-2" style="align-items:flex-start;grid-template-columns:1.6fr 1fr;">
+      <form id="checkout-form">
+        <div class="card">
+          <h3 style="font-size:1rem;">Contact details</h3>
+          <div class="field-row">
+            <div class="field"><label>Full name</label><input required placeholder="Jane Wanjiku"></div>
+            <div class="field"><label>Phone number</label><input required placeholder="07xx xxx xxx"></div>
+          </div>
+          <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3 style="font-size:1rem;">Service address</h3>
+          <div class="field"><label>Address / estate</label><input required placeholder="e.g. Kilimani, Nairobi"></div>
+          <div class="field-row">
+            <div class="field"><label>Preferred date</label><input type="date" required></div>
+            <div class="field"><label>Preferred time</label><input type="time" required></div>
+          </div>
+          <div class="field"><label>Access notes (optional)</label><textarea rows="2" placeholder="Gate code, parking, pets, etc."></textarea></div>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3 style="font-size:1rem;">Payment method</h3>
+          <div class="field"><select><option>M-Pesa</option><option>Visa / Mastercard</option><option>PayPal</option><option>Pay on completion (cash)</option></select></div>
+          <p class="small">Payments are processed securely; card details are never stored on our servers.</p>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:8px;">Confirm booking</button>
+      </form>
+      <div class="ticket">
+        <div class="ticket-head"><span class="id mono">ORDER TOTAL</span><span class="status">PENDING</span></div>
+        <div class="ticket-body" id="checkout-summary"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIRMATION ============ -->
+<section class="view" id="view-confirmation">
+  <div class="wrap" style="padding:80px 24px;max-width:560px;text-align:center;">
+    <div class="ticket" style="text-align:left;">
+      <div class="ticket-head"><span class="id mono">JOB #<span id="order-ref">MI-4821</span></span><span class="status">CONFIRMED</span></div>
+      <div class="ticket-body">
+        <p style="margin:0;color:var(--ink);">Your booking is confirmed. A confirmation and receipt have been sent to your email, and our dispatch team will WhatsApp you the crew's ETA the day before.</p>
+      </div>
+      <div class="perf"></div>
+      <div style="padding:20px 22px;display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="#" class="btn btn-primary" data-view="view-account">Track in My Account</a>
+        <a href="#" class="btn btn-outline" data-view="view-services">Book another service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACCOUNT (customer dashboard) ============ -->
+<section class="view" id="view-account">
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="#" data-view="view-home">Home</a> / My Account</div>
+    <h1>Welcome back, Jane</h1>
+    <p>Track jobs, manage saved details, and download receipts.</p>
+  </div>
+  <div class="wrap" style="padding:36px 24px 80px;">
+    <div class="grid-2" style="grid-template-columns:2fr 1fr;align-items:flex-start;">
+      <div>
+        <div class="card">
+          <h3 style="font-size:1rem;">Upcoming appointments</h3>
+          <table>
+            <thead><tr><th>Job</th><th>Service</th><th>Date</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">MI-4822</td><td>General Cleaning</td><td>12 Aug, 9:00am</td><td><span class="badge badge-pending">Scheduled</span></td></tr>
+              <tr><td class="mono">MI-4819</td><td>Gardening &amp; Landscaping</td><td>18 Aug, 8:30am</td><td><span class="badge badge-pending">Scheduled</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3 style="font-size:1rem;">Order &amp; job history</h3>
+          <table>
+            <thead><tr><th>Job</th><th>Service</th><th>Date</th><th>Total</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="mono">MI-4820</td><td>Deep Cleaning</td><td>28 Jul</td><td class="mono">KSh 6,500</td><td><span class="badge badge-done">Completed</span></td><td><a href="#" class="small">Invoice ↓</a></td></tr>
+              <tr><td class="mono">MI-4801</td><td>Fumigation</td><td>02 Jul</td><td class="mono">KSh 4,500</td><td><span class="badge badge-done">Completed</span></td><td><a href="#" class="small">Invoice ↓</a></td></tr>
+              <tr><td class="mono">MI-4790</td><td>Car Cleaning</td><td>19 Jun</td><td class="mono">KSh 1,800</td><td><span class="badge badge-done">Completed</span></td><td><a href="#" class="small">Invoice ↓</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3 style="font-size:1rem;">Profile</h3>
+          <div class="field"><label>Name</label><input value="Jane Wanjiku"></div>
+          <div class="field"><label>Phone</label><input value="+254 7•• ••• •••"></div>
+          <button class="btn btn-outline btn-sm">Save changes</button>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3 style="font-size:1rem;">Saved address</h3>
+          <p class="small" style="margin:0;">Kilimani, Nairobi — Apartment 4B</p>
+          <button class="btn btn-outline btn-sm" style="margin-top:10px;">Manage addresses</button>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3 style="font-size:1rem;">Saved payment method</h3>
+          <p class="small" style="margin:0;">M-Pesa — •••• 214</p>
+          <button class="btn btn-outline btn-sm" style="margin-top:10px;">Manage payment methods</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<section class="view" id="view-admin">
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="#" data-view="view-home">Home</a> / Admin</div>
+    <h1>Operations dashboard</h1>
+    <p>Overview mockup — connect a backend to make this live (see architecture guide).</p>
+  </div>
+  <div class="wrap" style="padding:36px 24px 80px;">
+    <div class="grid-4">
+      <div class="card"><span class="small">Revenue this month</span><h2 style="margin:6px 0 0;font-size:1.6rem;">KSh 842,300</h2></div>
+      <div class="card"><span class="small">Jobs completed</span><h2 style="margin:6px 0 0;font-size:1.6rem;">184</h2></div>
+      <div class="card"><span class="small">Active customers</span><h2 style="margin:6px 0 0;font-size:1.6rem;">612</h2></div>
+      <div class="card"><span class="small">Pending jobs</span><h2 style="margin:6px 0 0;font-size:1.6rem;">9</h2></div>
+    </div>
+    <div class="card" style="margin-top:22px;">
+      <div class="section-head" style="margin-bottom:14px;">
+        <h3 style="font-size:1rem;margin:0;">Recent jobs</h3>
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn-outline btn-sm">+ Add service</button>
+          <button class="btn btn-primary btn-sm">+ New promotion</button>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Job</th><th>Customer</th><th>Service</th><th>Crew</th><th>Status</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">MI-4822</td><td>Jane Wanjiku</td><td>General Cleaning</td><td>Team B</td><td><span class="badge badge-pending">Scheduled</span></td><td class="mono">KSh 2,500</td></tr>
+          <tr><td class="mono">MI-4821</td><td>Brian Otieno</td><td>Fumigation</td><td>Team C</td><td><span class="badge badge-progress">In progress</span></td><td class="mono">KSh 4,500</td></tr>
+          <tr><td class="mono">MI-4820</td><td>Wanjiru Kamau</td><td>Deep Cleaning</td><td>Team A</td><td><span class="badge badge-done">Completed</span></td><td class="mono">KSh 6,500</td></tr>
+          <tr><td class="mono">MI-4819</td><td>Peter Mwangi</td><td>Gardening</td><td>Team D</td><td><span class="badge badge-pending">Scheduled</span></td><td class="mono">KSh 3,200</td></tr>
+          <tr><td class="mono">MI-4818</td><td>Amina Hassan</td><td>Office Cleaning</td><td>Team A</td><td><span class="badge badge-done">Completed</span></td><td class="mono">KSh 12,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2" style="margin-top:22px;">
+      <div class="card">
+        <h3 style="font-size:1rem;">Manage catalogue</h3>
+        <p class="small">Add, edit or retire services; update pricing and crew requirements.</p>
+        <button class="btn btn-outline btn-sm">Open catalogue manager</button>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1rem;">Reports &amp; analytics</h3>
+        <p class="small">Revenue by service, repeat-customer rate, crew utilisation.</p>
+        <button class="btn btn-outline btn-sm">Open reports</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="color:#fff;margin-bottom:12px;">
+          <span class="mark">MI</span><span>MILAN<small style="color:rgba(255,255,255,.6);">INVESTMENT COMPANY</small></span>
+        </div>
+        <p style="color:rgba(255,255,255,.65);max-width:32ch;">Professional cleaning, fumigation, car care and gardening services across Nairobi. Licensed, insured, and background-checked crews.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/milaninvestment" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="X">x</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#" data-view="view-services">General Cleaning</a></li>
+          <li><a href="#" data-view="view-services">Fumigation</a></li>
+          <li><a href="#" data-view="view-services">Car Cleaning</a></li>
+          <li><a href="#" data-view="view-services">Deep Cleaning</a></li>
+          <li><a href="#" data-view="view-services">Gardening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#" data-view="view-home">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Return / Re-clean Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li>+254 720 697 468</li>
+          <li>+254 724 771 831</li>
+          <li>milaninvestment72@gmail.com</li>
+          <li>Lang'ata, Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Milan Investment Company. All rights reserved.</span>
+      <span>Placeholder business details — replace with live contact info before launch.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/254724771831" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.13L2 22l5.13-1.55a9.87 9.87 0 0 0 4.91 1.3h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.14c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.78-.11-.41-.12-.93-.29-1.6-.57-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.35.26-.28.57-.35.76-.35h.55c.18 0 .41-.03.64.49.24.55.81 1.94.88 2.08.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.28-.12.55.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.53.72 1.79.85.26.14.44.2.5.31.06.12.06.68-.18 1.36Z"/></svg>
+</a>
+
+<div class="toast" id="toast"><span class="dot"></span><span>Notice</span></div>
+
+<script>
+/* MILAN INVESTMENT COMPANY — front-end prototype logic
+   All state lives in memory only (no browser storage used). */
+
+/* ---------- data: services catalogue ---------- */
+const SERVICES = [
+  { id:"gc-01", cat:"cleaning", name:"General Cleaning", tagline:"Routine home & office upkeep",
+    desc:"A full sweep of living or work spaces — dusting, mopping, sanitising, and tidy-up — scheduled weekly, bi-weekly or once-off.",
+    price:2500, unit:"visit", rating:4.8, reviews:132, duration:"2–3 hrs", crew:"2 staff",
+    icon:"sparkle", includes:["Dusting & surface wipe-down","Floor mopping & vacuuming","Kitchen & bathroom sanitising","Trash removal"] },
+  { id:"fm-02", cat:"fumigation", name:"Fumigation & Pest Control", tagline:"Cockroaches, bedbugs, rodents, termites",
+    desc:"Targeted chemical treatment for common household and commercial pests, using EPA-listed products safe for re-entry after 4 hours.",
+    price:4500, unit:"treatment", rating:4.9, reviews:87, duration:"1–2 hrs", crew:"2 technicians",
+    includes:["Pre-treatment inspection","Interior & perimeter spraying","Bait station placement","30-day re-treatment guarantee"] },
+  { id:"cc-03", cat:"car", name:"Car Cleaning & Detailing", tagline:"Interior, exterior & engine bay",
+    desc:"Hand wash, vacuum, interior shampoo and wax finish. Add-on packages available for leather conditioning and engine bay degreasing.",
+    price:1800, unit:"vehicle", rating:4.7, reviews:210, duration:"1 hr", crew:"1–2 staff",
+    includes:["Exterior hand wash & wax","Interior vacuum & wipe-down","Tyre & rim shine","Window cleaning in & out"] },
+  { id:"dc-04", cat:"cleaning", name:"Deep Cleaning", tagline:"Move-in, move-out & spring clean",
+    desc:"An intensive top-to-bottom clean covering grout, appliance interiors, skirting boards, and areas routine cleaning skips.",
+    price:6500, unit:"visit", rating:4.9, reviews:64, duration:"4–6 hrs", crew:"3 staff",
+    includes:["Inside oven, fridge & cabinets","Grout & tile scrubbing","Window tracks & skirting boards","Wall mark removal"] },
+  { id:"gd-05", cat:"garden", name:"Gardening & Landscaping", tagline:"Lawn care, hedging, planting",
+    desc:"Ongoing grounds maintenance or one-off landscaping — mowing, hedge trimming, bed weeding and seasonal planting.",
+    price:3200, unit:"visit", rating:4.8, reviews:58, duration:"2–4 hrs", crew:"2 groundskeepers",
+    includes:["Lawn mowing & edging","Hedge & shrub trimming","Weeding & bed clean-up","Green waste removal"] },
+  { id:"oc-06", cat:"cleaning", name:"Office & Commercial Cleaning", tagline:"Contracted facilities upkeep",
+    desc:"Scheduled cleaning contracts for offices, retail floors and small commercial units, with a dedicated account supervisor.",
+    price:12000, unit:"month", rating:4.9, reviews:41, duration:"Ongoing", crew:"Dedicated crew",
+    includes:["Daily or weekly visits","Restroom & pantry sanitising","Waste & recycling management","Monthly supervisor walk-through"] },
+];
+
+const ICONS = {
+  sparkle:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 46c-8 0-13-5-13-12s5-11 11-11c1-6 6-10 12-10 7 0 12 5 13 11 5 1 8 5 8 10 0 7-5 12-12 12H24Z"/>
+    <path d="M20 48v6M28 48v8M36 48v6" stroke-width="1.4"/>
+    <circle cx="46" cy="18" r="2.2" fill="currentColor" stroke="none" opacity=".8"/>
+    <circle cx="50" cy="26" r="1.4" fill="currentColor" stroke="none" opacity=".6"/>
+    <path d="M43 12l1.6 3.4L48 17l-3.4 1.6L43 22l-1.6-3.4L38 17l3.4-1.6Z" fill="currentColor" stroke="none" opacity=".9"/>
+  </svg>`,
+  fumigation:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 20h10l4-6h6v10l-4 3v21a3 3 0 0 1-3 3H25a3 3 0 0 1-3-3V20Z"/>
+    <path d="M22 27h20M31 14v-4" stroke-width="1.4"/>
+    <path d="M40 34c3-1 6-1 8 1M42 40c3-1 6-1 8 1M39 28c3-1 6-1 8 1" stroke-width="1.3" opacity=".8"/>
+    <g opacity=".85">
+      <ellipse cx="29" cy="44" rx="4.2" ry="3" />
+      <path d="M25.5 44h-3M32.5 44h3M27 41l-2-2M31 41l2-2M27 47l-2 2M31 47l2 2"/>
+    </g>
+  </svg>`,
+  car:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 38l3-11a4 4 0 0 1 3.8-2.8h26.4A4 4 0 0 1 49 27l3 11v10H12V38Z"/>
+    <path d="M12 38h40M20 24l-2 7M44 24l2 7"/>
+    <circle cx="20" cy="48" r="3.4"/>
+    <circle cx="44" cy="48" r="3.4"/>
+    <path d="M8 32c2-2 4-2 6 0M50 32c2-2 4-2 6 0" stroke-width="1.3" opacity=".8"/>
+    <path d="M46 14l1.4 3 3 1.4-3 1.4-1.4 3-1.4-3-3-1.4 3-1.4Z" fill="currentColor" stroke="none" opacity=".9"/>
+  </svg>`,
+  deep:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="10" height="10"/><rect x="26" y="14" width="10" height="10"/>
+    <rect x="14" y="26" width="10" height="10"/><rect x="26" y="26" width="10" height="10"/>
+    <path d="M42 40l8 8M39 37a7 7 0 1 1 3 3l-1-1" />
+    <path d="M18 40c4 2 4 6 0 8M30 40c4 2 4 6 0 8" stroke-width="1.3" opacity=".75"/>
+  </svg>`,
+  garden:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 50V28"/>
+    <path d="M32 34c-8 0-12-4-12-12 8 0 12 4 12 12Zm0 0c8 0 12-4 12-12-8 0-12 4-12 12Z"/>
+    <path d="M32 44c-6 0-9-3-9-9 6 0 9 3 9 9Z" opacity=".85"/>
+    <path d="M16 50h32" stroke-width="1.4"/>
+    <circle cx="48" cy="16" r="4" fill="currentColor" stroke="none" opacity=".85"/>
+    <path d="M48 8v2M48 22v2M40 16h2M54 16h2" stroke-width="1.3" opacity=".8"/>
+  </svg>`,
+  office:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 50V20l14-8 14 8v30" />
+    <path d="M20 50V28h16v22M25 28v8M31 28v8" stroke-width="1.4"/>
+    <path d="M42 50V30l8-4v24" opacity=".85"/>
+    <path d="M14 50h36" stroke-width="1.4"/>
+  </svg>`,
+};
+function iconFor(cat){ return ICONS[{cleaning:'sparkle',fumigation:'fumigation',car:'car',garden:'garden',office:'office'}[cat]] || ICONS.sparkle; }
+function illustrationFor(id){
+  const map = { "gc-01":"sparkle", "fm-02":"fumigation", "cc-03":"car", "dc-04":"deep", "gd-05":"garden", "oc-06":"office" };
+  return ICONS[map[id]] || ICONS.sparkle;
+}
+
+/* ---------- state ---------- */
+const state = { booking: [], activeService: null, filterCat: "all", search: "" };
+let ticketCounter = 4821;
+
+/* ---------- money ---------- */
+const fmt = n => "KSh " + n.toLocaleString("en-KE");
+
+/* ---------- view routing ---------- */
+function showView(id){
+  document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+  const target = document.getElementById(id);
+  if(target) target.classList.add("active");
+  document.querySelectorAll(".nav-links a").forEach(a=>a.classList.toggle("active", a.dataset.view===id));
+  window.scrollTo({top:0,behavior:"smooth"});
+  document.querySelectorAll(".mobile-nav").forEach(m=>m.classList.remove("open"));
+}
+document.addEventListener("click", e=>{
+  const nav = e.target.closest("[data-view]");
+  if(nav){ e.preventDefault(); showView(nav.dataset.view); }
+});
+
+/* ---------- toast ---------- */
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.querySelector("span").textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), 2600);
+}
+
+/* ---------- render: service cards ---------- */
+function renderServiceCard(s, compact){
+  return `<div class="svc-card">
+    <div class="svc-thumb">${illustrationFor(s.id)}<span class="svc-badge">${s.cat.toUpperCase()}</span></div>
+    <div class="svc-body">
+      <h3>${s.name}</h3>
+      <p>${s.tagline}</p>
+      <div class="stars">★★★★★ <span class="small mono">${s.rating} (${s.reviews})</span></div>
+      <div class="svc-meta">
+        <div class="price">${fmt(s.price)} <small>/ ${s.unit}</small></div>
+        <button class="btn btn-outline btn-sm" data-open="${s.id}">View</button>
+      </div>
+    </div>
+  </div>`;
+}
+function renderGrid(){
+  const grid = document.getElementById("services-grid");
+  const list = SERVICES.filter(s =>
+    (state.filterCat==="all" || s.cat===state.filterCat) &&
+    (s.name.toLowerCase().includes(state.search.toLowerCase()))
+  );
+  grid.innerHTML = list.length ? list.map(s=>renderServiceCard(s)).join("") :
+    `<p class="small">No services match that search — try clearing filters.</p>`;
+}
+document.addEventListener("click", e=>{
+  const open = e.target.closest("[data-open]");
+  if(open){ e.preventDefault(); openService(open.dataset.open); }
+  const chip = e.target.closest(".chip[data-cat]");
+  if(chip){
+    document.querySelectorAll(".chip[data-cat]").forEach(c=>c.classList.remove("active"));
+    chip.classList.add("active");
+    state.filterCat = chip.dataset.cat;
+    renderGrid();
+  }
+});
+document.addEventListener("input", e=>{
+  if(e.target.id==="svc-search"){ state.search = e.target.value; renderGrid(); }
+});
+
+/* ---------- service detail ---------- */
+function openService(id){
+  const s = SERVICES.find(x=>x.id===id);
+  if(!s) return;
+  state.activeService = s;
+  document.getElementById("detail-content").innerHTML = `
+    <div class="breadcrumb"><a href="#" data-view="view-services">Services</a> / ${s.name}</div>
+    <div class="grid-2" style="align-items:flex-start;gap:40px;">
+      <div>
+        <div class="svc-thumb" style="height:260px;border-radius:10px;">${illustrationFor(s.id)}<span class="svc-badge">${s.cat.toUpperCase()}</span></div>
+        <div class="divider"></div>
+        <h2>${s.name}</h2>
+        <div class="stars">★★★★★ <span class="small mono">${s.rating} rating · ${s.reviews} reviews</span></div>
+        <p style="margin-top:14px;">${s.desc}</p>
+        <h4 style="margin-top:20px;font-size:.95rem;">What's included</h4>
+        <ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;">
+          ${s.includes.map(i=>`<li style="margin-bottom:6px;">${i}</li>`).join("")}
+        </ul>
+      </div>
+      <div class="ticket">
+        <div class="ticket-head">
+          <span class="id mono">JOB #MI-${ticketCounter}</span>
+          <span class="status">BOOKABLE</span>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-row"><span>Service</span><span>${s.name}</span></div>
+          <div class="ticket-row"><span>Rate</span><span>${fmt(s.price)} / ${s.unit}</span></div>
+          <div class="ticket-row"><span>Est. duration</span><span>${s.duration}</span></div>
+          <div class="ticket-row"><span>Crew size</span><span>${s.crew}</span></div>
+        </div>
+        <div class="perf"></div>
+        <div style="padding:22px;">
+          <div class="field">
+            <label for="qty">Quantity / units</label>
+            <input type="number" id="qty" value="1" min="1" style="max-width:120px;">
+          </div>
+          <button class="btn btn-primary btn-block" id="add-to-booking">Add to booking</button>
+          <button class="btn btn-outline btn-block" style="margin-top:10px;" data-view="view-booking">Buy now — go to booking</button>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById("add-to-booking").onclick = () => {
+    const qty = Math.max(1, parseInt(document.getElementById("qty").value)||1);
+    addToBooking(s, qty);
+  };
+  showView("view-service-detail");
+}
+
+/* ---------- booking cart ---------- */
+function addToBooking(s, qty){
+  const existing = state.booking.find(i=>i.id===s.id);
+  if(existing){ existing.qty += qty; } else { state.booking.push({...s, qty}); }
+  toast(`Added ${s.name} to your booking`);
+  renderCartPill();
+}
+function removeFromBooking(id){
+  state.booking = state.booking.filter(i=>i.id!==id);
+  renderBooking(); renderCartPill();
+}
+function changeQty(id, delta){
+  const item = state.booking.find(i=>i.id===id);
+  if(!item) return;
+  item.qty = Math.max(1, item.qty + delta);
+  renderBooking(); renderCartPill();
+}
+function renderCartPill(){
+  const count = state.booking.reduce((a,i)=>a+i.qty,0);
+  document.querySelectorAll(".cart-count").forEach(el=>el.textContent = count);
+}
+function subtotal(){ return state.booking.reduce((a,i)=>a + i.price*i.qty, 0); }
+
+function renderBooking(){
+  const box = document.getElementById("booking-items");
+  if(state.booking.length===0){
+    box.innerHTML = `<div class="card center"><p>Your booking is empty — browse services to add one.</p>
+      <button class="btn btn-primary" data-view="view-services">Browse services</button></div>`;
+  } else {
+    box.innerHTML = `<table>
+      <thead><tr><th>Service</th><th>Rate</th><th>Qty</th><th>Total</th><th></th></tr></thead>
+      <tbody>
+      ${state.booking.map(i=>`
+        <tr>
+          <td>${i.name}<div class="small">${fmt(i.price)} / ${i.unit}</div></td>
+          <td class="mono">${fmt(i.price)}</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <button class="btn btn-outline btn-sm" onclick="changeQty('${i.id}',-1)">–</button>
+              <span class="mono">${i.qty}</span>
+              <button class="btn btn-outline btn-sm" onclick="changeQty('${i.id}',1)">+</button>
+            </div>
+          </td>
+          <td class="mono">${fmt(i.price*i.qty)}</td>
+          <td><button class="btn btn-outline btn-sm" onclick="removeFromBooking('${i.id}')">Remove</button></td>
+        </tr>`).join("")}
+      </tbody>
+    </table>`;
+  }
+  const sub = subtotal();
+  const promo = state.promoApplied ? Math.round(sub*0.1) : 0;
+  const total = sub - promo;
+  document.getElementById("booking-summary").innerHTML = `
+    <div class="ticket-row"><span>Subtotal</span><span>${fmt(sub)}</span></div>
+    ${promo? `<div class="ticket-row"><span>Promo (WELCOME10)</span><span>-${fmt(promo)}</span></div>`:""}
+    <div class="ticket-row"><span>Callout fee</span><span>${sub>0?fmt(500):fmt(0)}</span></div>
+    <div class="ticket-row" style="font-weight:700;"><span>Total due</span><span>${fmt(total + (sub>0?500:0))}</span></div>`;
+}
+function applyPromo(){
+  const code = document.getElementById("promo-code").value.trim().toUpperCase();
+  if(code === "WELCOME10"){ state.promoApplied = true; toast("Promo code applied — 10% off"); }
+  else { toast("That promo code isn't valid"); }
+  renderBooking();
+}
+
+/* ---------- checkout ---------- */
+function goCheckout(){
+  if(state.booking.length===0){ toast("Add a service before checking out"); return; }
+  showView("view-checkout");
+  document.getElementById("checkout-summary").innerHTML = document.getElementById("booking-summary").innerHTML;
+}
+function placeOrder(e){
+  e.preventDefault();
+  ticketCounter++;
+  document.getElementById("order-ref").textContent = "MI-" + ticketCounter;
+  state.booking = [];
+  state.promoApplied = false;
+  renderCartPill();
+  showView("view-confirmation");
+}
+
+/* ---------- init ---------- */
+document.addEventListener("DOMContentLoaded", ()=>{
+  renderGrid();
+  renderBooking();
+  renderCartPill();
+  const promoBtn = document.getElementById("apply-promo");
+  if(promoBtn) promoBtn.onclick = applyPromo;
+  const checkoutForm = document.getElementById("checkout-form");
+  if(checkoutForm) checkoutForm.addEventListener("submit", placeOrder);
+  document.querySelectorAll(".mobile-toggle").forEach(btn=>{
+    btn.addEventListener("click", ()=> document.querySelector(".mobile-nav").classList.toggle("open"));
+  });
+});
+
+</script>
+<script>
+  /* home page dynamic sections built from the SERVICES catalogue */
+  document.addEventListener("DOMContentLoaded", () => {
+    const catMeta = [
+      {cat:"cleaning", label:"General Cleaning", desc:"Routine home & office upkeep"},
+      {cat:"fumigation", label:"Fumigation & Pest Control", desc:"Roaches, rodents, termites"},
+      {cat:"car", label:"Car Cleaning", desc:"Interior, exterior & engine bay"},
+      {cat:"garden", label:"Gardening", desc:"Lawn care & landscaping"},
+    ];
+    document.getElementById("home-categories").innerHTML = catMeta.map(c => `
+      <a href="#" class="svc-card" style="text-decoration:none;" onclick="state.filterCat='${c.cat}'; document.querySelectorAll('.chip[data-cat]').forEach(x=>x.classList.toggle('active',x.dataset.cat==='${c.cat}')); renderGrid(); showView('view-services');">
+        <div class="svc-thumb">${iconFor(c.cat)}</div>
+        <div class="svc-body"><h3>${c.label}</h3><p>${c.desc}</p></div>
+      </a>`).join("");
+
+    const featured = ["dc-04","fm-02","cc-03"].map(id => SERVICES.find(s=>s.id===id));
+    document.getElementById("home-featured").innerHTML = featured.map(s => renderServiceCard(s)).join("");
+  });
+</script>
+</body>
+</html>
